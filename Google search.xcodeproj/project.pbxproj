@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		A784D8C12637400F001542BF /* RiiT_F.otf in Resources */ = {isa = PBXBuildFile; fileRef = A784D8C02637400F001542BF /* RiiT_F.otf */; };
 		A784D8C5263740A6001542BF /* CALayer+border_Color.m in Sources */ = {isa = PBXBuildFile; fileRef = A784D8C4263740A6001542BF /* CALayer+border_Color.m */; };
+		A784D8D926375A29001542BF /* coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784D8D726375A29001542BF /* coin.swift */; };
+		A784D8DA26375A29001542BF /* coin.xib in Resources */ = {isa = PBXBuildFile; fileRef = A784D8D826375A29001542BF /* coin.xib */; };
+		A784D8DE26376D8B001542BF /* Tic-tac-toe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784D8DD26376D8B001542BF /* Tic-tac-toe.swift */; };
+		A784D8E02637832C001542BF /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784D8DF2637832C001542BF /* Grid.swift */; };
+		A784D8E226378373001542BF /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784D8E126378373001542BF /* GridView.swift */; };
+		A784D8E42637839C001542BF /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784D8E32637839C001542BF /* InfoView.swift */; };
 		A7FD259626361B3A00464B8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD259526361B3A00464B8D /* AppDelegate.swift */; };
 		A7FD259826361B3A00464B8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD259726361B3A00464B8D /* SceneDelegate.swift */; };
 		A7FD259A26361B3A00464B8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FD259926361B3A00464B8D /* ViewController.swift */; };
@@ -22,6 +28,12 @@
 		A784D8C2263740A6001542BF /* Google search-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Google search-Bridging-Header.h"; sourceTree = "<group>"; };
 		A784D8C3263740A6001542BF /* CALayer+border_Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+border_Color.h"; sourceTree = "<group>"; };
 		A784D8C4263740A6001542BF /* CALayer+border_Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+border_Color.m"; sourceTree = "<group>"; };
+		A784D8D726375A29001542BF /* coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coin.swift; sourceTree = "<group>"; };
+		A784D8D826375A29001542BF /* coin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = coin.xib; sourceTree = "<group>"; };
+		A784D8DD26376D8B001542BF /* Tic-tac-toe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tic-tac-toe.swift"; sourceTree = "<group>"; };
+		A784D8DF2637832C001542BF /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		A784D8E126378373001542BF /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		A784D8E32637839C001542BF /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		A7FD259226361B3A00464B8D /* Google search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FD259526361B3A00464B8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7FD259726361B3A00464B8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +58,12 @@
 		A7FD258926361B3A00464B8D = {
 			isa = PBXGroup;
 			children = (
+				A784D8E32637839C001542BF /* InfoView.swift */,
+				A784D8E126378373001542BF /* GridView.swift */,
+				A784D8DF2637832C001542BF /* Grid.swift */,
+				A784D8DD26376D8B001542BF /* Tic-tac-toe.swift */,
+				A784D8D726375A29001542BF /* coin.swift */,
+				A784D8D826375A29001542BF /* coin.xib */,
 				A784D8C3263740A6001542BF /* CALayer+border_Color.h */,
 				A784D8C4263740A6001542BF /* CALayer+border_Color.m */,
 				A7FD259426361B3A00464B8D /* Google search */,
@@ -135,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A784D8DA26375A29001542BF /* coin.xib in Resources */,
 				A7FD25A226361B3B00464B8D /* LaunchScreen.storyboard in Resources */,
 				A7FD259F26361B3B00464B8D /* Assets.xcassets in Resources */,
 				A784D8C12637400F001542BF /* RiiT_F.otf in Resources */,
@@ -149,9 +168,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A784D8D926375A29001542BF /* coin.swift in Sources */,
 				A7FD259A26361B3A00464B8D /* ViewController.swift in Sources */,
+				A784D8E226378373001542BF /* GridView.swift in Sources */,
+				A784D8DE26376D8B001542BF /* Tic-tac-toe.swift in Sources */,
 				A784D8C5263740A6001542BF /* CALayer+border_Color.m in Sources */,
 				A7FD259626361B3A00464B8D /* AppDelegate.swift in Sources */,
+				A784D8E02637832C001542BF /* Grid.swift in Sources */,
+				A784D8E42637839C001542BF /* InfoView.swift in Sources */,
 				A7FD259826361B3A00464B8D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

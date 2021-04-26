@@ -10,8 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
     @IBOutlet weak var coinImage: UIImageView!
     @IBOutlet weak var startButton: UIButton!
+    
+  
     
     
     override func viewDidLoad() {

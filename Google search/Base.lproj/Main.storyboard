@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bvg-BX-2cM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -12,13 +13,219 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Tic tac toe-->
+        <scene sceneID="NFz-rP-ctk">
+            <objects>
+                <viewController id="CIs-CC-9Du" customClass="Tic_tac_toe" customModule="Google_search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wPd-GN-mrI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4T2-HZ-umj" userLabel="gridView">
+                                <rect key="frame" x="0.0" y="143" width="414" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ktY-7g-brI">
+                                <rect key="frame" x="8" y="145" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6CS-Rq-YOl">
+                                <rect key="frame" x="142" y="145" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmm-mj-yf6">
+                                <rect key="frame" x="276" y="145" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MxR-Tg-q2a">
+                                <rect key="frame" x="8" y="280" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oVp-kp-zIO">
+                                <rect key="frame" x="142" y="280" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gew-EY-SDB">
+                                <rect key="frame" x="276" y="280" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LYP-nT-ohr">
+                                <rect key="frame" x="8" y="414" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZNG-6F-CbQ">
+                                <rect key="frame" x="142" y="414" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XnR-T5-ozK">
+                                <rect key="frame" x="276" y="414" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="圈圈叉叉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKf-dl-yGj">
+                                <rect key="frame" x="96" y="39" width="222" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RiiTegakiFude" family="RiiTegakiFude" pointSize="40"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="O" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odJ-eN-85B">
+                                <rect key="frame" x="20" y="678" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94889909029006958" green="0.78617161512374878" blue="0.83672899007797241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="RiiTegakiFude" family="RiiTegakiFude" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFP-Qc-xeH">
+                                <rect key="frame" x="264" y="678" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76703208684921265" green="0.93919521570205688" blue="0.93953830003738403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="RiiTegakiFude" family="RiiTegakiFude" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBu-yM-r8p" userLabel="InfoView">
+                                <rect key="frame" x="167" y="699" width="81" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" image="info.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="closeInfoView:" destination="CIs-CC-9Du" eventType="touchUpInside" id="cju-1Q-exu"/>
+                                    <action selector="infoButtonTapped:" destination="CIs-CC-9Du" eventType="touchUpInside" id="snF-PD-raR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZWp-pr-D6u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="gestureRecognizer" destination="G90-Uz-WJp" id="cfa-rz-gTW"/>
+                        <outlet property="infoView" destination="WBu-yM-r8p" id="DeL-Fo-vfw"/>
+                        <outlet property="oLabel" destination="odJ-eN-85B" id="AGG-ND-o72"/>
+                        <outlet property="xLabel" destination="HFP-Qc-xeH" id="xLb-7Z-kti"/>
+                        <outletCollection property="squares" destination="lmm-mj-yf6" collectionClass="NSMutableArray" id="wN2-d7-15s"/>
+                        <outletCollection property="squares" destination="MxR-Tg-q2a" collectionClass="NSMutableArray" id="S9j-gi-wFS"/>
+                        <outletCollection property="squares" destination="oVp-kp-zIO" collectionClass="NSMutableArray" id="cXU-8S-fel"/>
+                        <outletCollection property="squares" destination="Gew-EY-SDB" collectionClass="NSMutableArray" id="fWG-GU-84c"/>
+                        <outletCollection property="squares" destination="LYP-nT-ohr" collectionClass="NSMutableArray" id="vUf-0f-Egq"/>
+                        <outletCollection property="squares" destination="ZNG-6F-CbQ" collectionClass="NSMutableArray" id="AjM-To-32J"/>
+                        <outletCollection property="squares" destination="XnR-T5-ozK" collectionClass="NSMutableArray" id="lGs-wc-KZ0"/>
+                        <outletCollection property="squares" destination="ktY-7g-brI" collectionClass="NSMutableArray" id="zsU-xo-MTq"/>
+                        <outletCollection property="squares" destination="6CS-Rq-YOl" collectionClass="NSMutableArray" id="1w0-bx-FFH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QSF-mW-vjD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="G90-Uz-WJp">
+                    <connections>
+                        <action selector="movePiece:" destination="CIs-CC-9Du" id="Smh-3G-pdT"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1539.1304347826087" y="-407.14285714285711"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dHf-GA-6gP">
+            <objects>
+                <viewController id="Bvg-BX-2cM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R9I-oD-e68">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALb-Ll-cyN">
+                                <rect key="frame" x="53" y="128" width="309" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.23351743820000001" green="0.73174738880000001" blue="0.086089842020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="RiiTegakiFude" family="RiiTegakiFude" pointSize="50"/>
+                                <state key="normal" title="擲硬幣">
+                                    <color key="titleColor" red="0.99306660889999998" green="0.99323230979999999" blue="0.99304467439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorWithUIColor">
+                                        <color key="value" red="0.23351743820000001" green="0.73174738880000001" blue="0.086089842020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="gfR-Ek-0Er"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mM6-rv-N8r">
+                                <rect key="frame" x="53" y="294" width="309" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75598567724227905" green="0.64347118139266968" blue="0.083747543394565582" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="RiiTegakiFude" family="RiiTegakiFude" pointSize="50"/>
+                                <state key="normal" title="擲骰子">
+                                    <color key="titleColor" red="0.99306660889999998" green="0.99323230979999999" blue="0.99304467439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorWithUIColor">
+                                        <color key="value" red="0.75598567724227905" green="0.64347118139266968" blue="0.083747543394565582" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="EZU-iw-Ns4" kind="presentation" id="dnE-Ud-DQ7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lz-s7-8jQ">
+                                <rect key="frame" x="53" y="451" width="309" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <fontDescription key="fontDescription" name="RiiTegakiFude" family="RiiTegakiFude" pointSize="50"/>
+                                <state key="normal" title="圈圈叉叉">
+                                    <color key="titleColor" red="0.99306660889999998" green="0.99323230979999999" blue="0.99304467439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorWithUIColor">
+                                        <color key="value" systemColor="systemTealColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="CIs-CC-9Du" kind="presentation" id="GxI-4a-WgC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zrd-GA-Tje"/>
+                        <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oX4-KK-RIa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-716" y="-407"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Google_search" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVf-0n-SFL">
@@ -65,11 +272,123 @@
                         <outlet property="startButton" destination="bVf-0n-SFL" id="oIe-nv-lMZ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4" y="-389"/>
+            <point key="canvasLocation" x="116" y="-625"/>
+        </scene>
+        <!--Coin-->
+        <scene sceneID="lxa-Ee-tra">
+            <objects>
+                <viewController id="EZU-iw-Ns4" customClass="coin" customModule="Google_search" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4nM-0A-x8f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o2" translatesAutoresizingMaskIntoConstraints="NO" id="5zQ-Vh-set">
+                                <rect key="frame" x="208" y="100" width="210" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o5" translatesAutoresizingMaskIntoConstraints="NO" id="QVY-1f-xt2">
+                                <rect key="frame" x="0.0" y="414" width="210" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o6" translatesAutoresizingMaskIntoConstraints="NO" id="GDX-Nf-W3Z">
+                                <rect key="frame" x="205" y="414" width="210" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o5" translatesAutoresizingMaskIntoConstraints="NO" id="t6z-Yn-YO2">
+                                <rect key="frame" x="3" y="571" width="210" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o6" translatesAutoresizingMaskIntoConstraints="NO" id="jRB-B3-prC">
+                                <rect key="frame" x="208" y="571" width="210" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o1" translatesAutoresizingMaskIntoConstraints="NO" id="38w-rG-qC0">
+                                <rect key="frame" x="-3" y="100" width="210" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0點" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEg-TR-qn7">
+                                <rect key="frame" x="20" y="34" width="374" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RiiTegakiFude" family="RiiTegakiFude" pointSize="40"/>
+                                <color key="textColor" red="0.75598567724227905" green="0.64347118139266968" blue="0.083747543394565582" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o3" translatesAutoresizingMaskIntoConstraints="NO" id="PAa-sx-h0o">
+                                <rect key="frame" x="0.0" y="257" width="210" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="o4" translatesAutoresizingMaskIntoConstraints="NO" id="aAY-Rm-stg">
+                                <rect key="frame" x="204" y="257" width="210" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3n-v3-Kvw">
+                                <rect key="frame" x="20" y="728" width="374" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75598567724227905" green="0.64347118139266968" blue="0.083747543394565582" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="RiiTegakiFude" family="RiiTegakiFude" pointSize="50"/>
+                                <state key="normal" title="擲骰子">
+                                    <color key="titleColor" red="0.99306660889999998" green="0.99323230979999999" blue="0.99304467439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorWithUIColor">
+                                        <color key="value" red="0.75598567724227905" green="0.64347118139266968" blue="0.083747543394565582" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startButtonCheck:" destination="EZU-iw-Ns4" eventType="touchUpInside" id="kdd-fx-nrf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XXe-HL-tYw"/>
+                        <color key="backgroundColor" red="0.95293325185775757" green="0.93891769647598267" blue="0.81197410821914673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nwb-6m-3de"/>
+                    <connections>
+                        <outlet property="dicesumText" destination="NEg-TR-qn7" id="p4e-8L-Qcn"/>
+                        <outlet property="startButton" destination="M3n-v3-Kvw" id="ErA-CP-Dis"/>
+                        <outletCollection property="diceImages" destination="38w-rG-qC0" collectionClass="NSMutableArray" id="Rch-Ke-orz"/>
+                        <outletCollection property="diceImages" destination="5zQ-Vh-set" collectionClass="NSMutableArray" id="PSi-Us-0aW"/>
+                        <outletCollection property="diceImages" destination="PAa-sx-h0o" collectionClass="NSMutableArray" id="QqE-qn-baS"/>
+                        <outletCollection property="diceImages" destination="aAY-Rm-stg" collectionClass="NSMutableArray" id="bhT-TK-81H"/>
+                        <outletCollection property="diceImages" destination="QVY-1f-xt2" collectionClass="NSMutableArray" id="xsa-OE-CNI"/>
+                        <outletCollection property="diceImages" destination="GDX-Nf-W3Z" collectionClass="NSMutableArray" id="XQC-ul-hkM"/>
+                        <outletCollection property="diceImages" destination="t6z-Yn-YO2" collectionClass="NSMutableArray" id="tXl-sb-ZI5"/>
+                        <outletCollection property="diceImages" destination="jRB-B3-prC" collectionClass="NSMutableArray" id="bf9-Iv-Oh6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4wj-lJ-NdL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="32.8125"/>
         </scene>
     </scenes>
     <resources>
         <image name="2" width="280" height="278"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="o1" width="370" height="408"/>
+        <image name="o2" width="356" height="421"/>
+        <image name="o3" width="348" height="414"/>
+        <image name="o4" width="352" height="407"/>
+        <image name="o5" width="353" height="403"/>
+        <image name="o6" width="352" height="403"/>
+        <systemColor name="quaternarySystemFillColor">
+            <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
